@@ -10,10 +10,10 @@ class Card extends React.Component {
 
         PriceTag(){
                 if(this.props.offer == 0){
-                       return <div className='price_tag'><h3>$ {this.props.price}</h3></div>;
+                       return <div className='da_price-tag'><h3>$ {this.props.price}</h3></div>;
                 }
                 else{
-                        return <div className='price_tag offer'><h3>$ {this.props.price}</h3><h5>&nbsp;${this.props.offer}</h5></div>;
+                        return <div className='da_price-tag da_offer'><h3>$ {this.props.price}</h3><h5>&nbsp;${this.props.offer}</h5></div>;
                 }
         }
         
@@ -26,7 +26,12 @@ class Card extends React.Component {
                         <h5>{this.props.name}</h5>
                         {this.PriceTag()}
                         <p >{this.props.description}</p>
+                        <div className='da_btns_cards'>
                         <a href={this.props.imageUrl} className="btn btn-primary">Añadir al carrito</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href={this.props.imageUrl} className="btn btn-secondary">Mas Info</a>
+                        </div>
+                        
                 </div>
                 </div>
                 );
