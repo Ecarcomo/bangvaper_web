@@ -3,7 +3,7 @@ import React from 'react';
 
 //=========Import Locales==========
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.css';
 import {ListCards} from './components/Cards.jsx';
 
 
