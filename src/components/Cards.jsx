@@ -5,6 +5,7 @@ import React from 'react';
 import '../styles/cards.css';
 
 
+
 let products = require('../data/productsData.json');/* obtengo JSON con datos de los productos en venta*/ 
 
 //=============Clases de creacion de componentes==================
@@ -22,19 +23,20 @@ class Card extends React.Component {
 
         render() {
                 return (
-                <div key= {this.props.id} className=" da_card col-sm-3">
-                <img  src={this.props.imageUrl} alt={'Photo of ' + this.props.name} ></img>
-                <div className="da_infoCard" >
-                        <h5>{this.props.name}</h5>
-                        {this.PriceTag()}
-                        <p >{this.props.description}</p>
-                        <div className='da_btns_cards'>
-                        <a href={this.props.imageUrl} className="btn btn-primary">Añadir al carrito</a>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href={this.props.imageUrl} className="btn btn-secondary">Mas Info</a>
+                <div key= {this.props.id} className=" da_card col-lg-3">
+                        <div className="da_card_container" >        
+                        <img src={this.props.imageUrl} alt={'Photo of ' + this.props.name} ></img>
+                                <div className='da_card_info'>
+                                        <h5>{this.props.name}</h5>
+                                        {this.PriceTag()}
+                                        <p>{this.props.description}</p>
+                                        <div className='da_btns_cards'>
+                                                <a href={this.props.imageUrl} className="btn btn-primary">Añadir al carrito</a>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <a href={this.props.imageUrl} className="btn btn-secondary">Mas Info</a>
+                                        </div>
+                                </div>
                         </div>
-                        
-                </div>
                 </div>
                 );
         }
