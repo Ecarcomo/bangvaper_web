@@ -68,13 +68,17 @@ body {
 justify-content: center;
 }
 
-.price_tag{
+.da_price-tag{
   display: inline-flex;
 }
-.offer h3{
+.da_offer h3{
   text-decoration: line-through;
   color: red;
 }
-.offer h5{
+.da_offer h5{
   color: rgb(61, 255, 61);
+}
+
+.da_btns_cards{
+  display: inline-flex;
 }
