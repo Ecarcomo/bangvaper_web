@@ -1,6 +1,8 @@
 //=========Import Globales==========
 import React from 'react';
 
+//=========Import Locales==========
+import '../styles/cards.css';
 
 
 let products = require('../data/productsData.json');/* obtengo JSON con datos de los productos en venta*/ 
