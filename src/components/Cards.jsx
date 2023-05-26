@@ -9,13 +9,13 @@ let products = require('../data/productsData.json');/* obtengo JSON con datos de
 class Card extends React.Component {
         render() {
                 return (
-                <div key= {this.props.id} className=" da_card col-sm-4">
+                <div key= {this.props.id} className=" da_card col-sm-3">
                 <img  src={this.props.imageUrl} alt={'Photo of ' + this.props.name} ></img>
-                <div >
-                <h5>{this.props.name}</h5>
-                <h3>$ {this.props.price}</h3>
-                <p >{this.props.description}</p>
-                <a href={this.props.imageUrl} className="btn btn-primary">Añadir al carrito</a>
+                <div className="da_infoCard" >
+                        <h5>{this.props.name}</h5>
+                        <h3>$ {this.props.price}</h3>
+                        <p >{this.props.description}</p>
+                        <a href={this.props.imageUrl} className="btn btn-primary">Añadir al carrito</a>
                 </div>
                 </div>
                 );
@@ -33,7 +33,7 @@ render() {
         return (
         <div>
         <div className="text">{texttest}</div>
-        <div className="card-deck">
+        <div className="card-deck da_card-deck">
         {products.map(product => this.renderCard(  product.id,
                                                 product.imageUrl,
                                                 product.name,
