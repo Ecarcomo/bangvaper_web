@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import { ListCards } from './components/Cards.jsx';
-import { Cart } from './components/Cart.jsx';
+import { WidgetCart } from './components/Cart.jsx';
 import { CartProvider} from "react-use-cart";
 
 
@@ -44,7 +44,7 @@ const Content = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <CartProvider>
-  <Cart />
+  <WidgetCart />
   <Content />
   </CartProvider>
 );
