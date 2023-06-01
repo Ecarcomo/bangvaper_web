@@ -26,6 +26,10 @@ function Card(props){
         }
     }
 
+    function addCard() {
+        addItem(props);
+        document.getElementById('widget_cart').classList.remove("closeCartAction");
+    }
    
 
     return (
@@ -37,7 +41,7 @@ function Card(props){
                     {PriceTag()}
                     <p>{props.description}</p>
                     <div className='da_btns_cards'>
-                        <a className="btn btn-primary" onClick={() => addItem(props)}>Añadir al carrito</a>
+                        <a className="btn btn-primary" onClick={addCard}>Añadir al carrito</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <a className="btn btn-secondary">Mas Info</a>
                     </div>
@@ -47,6 +51,7 @@ function Card(props){
     );
     
 }
+
 
 export const ListCards = ({ products }) => {
     const texttest = 'Lista de cards productos:';

@@ -3,8 +3,10 @@
         display: block;
         background-color: black;
         padding: 1rem;
-        width: 450px;
+        width: 550px;
         z-index: 100;
+        transition: transform 1s ease-in-out;
+        -webkit-transition: transform 1s ease-in-out;
         transform: translate(-100%,-100%);
         left: 95%;
         top: 100%;
@@ -18,7 +20,7 @@
         
 }
 
-.widget_cart:before{
+.widget_cart::before{
         content: "";
         position: absolute;
         top: 0;
@@ -28,20 +30,25 @@
         background-image:linear-gradient(-30deg, rgba(255, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0.6) 50%, rgba(255, 255, 255, 0.2) 100%);
         border-radius: 16px;
         box-shadow: 0 30px 4px rgba(0, 0, 0, 0.1);
+        z-index: 110;
 }
 
 
 .widget_cart  .w_cart {
-        
+        z-index: 200;
+        position: relative;
         background-color: black;
         border-top: 1px solid grey;
         border-bottom: 1px solid grey;
         width: 100%;
         min-width: max-content;
         height: 250px;
+        scrollbar-width: thin;
         overflow-x: unset;
         overflow-y: auto;
 }
+
+
 
 .widget_cart .w_cart article {
         background-color: black;
@@ -57,21 +64,23 @@
 
 .widget_cart .w_cart article span{
       margin-right: auto; 
-      padding: 0px 15px;
-      z-index: 125; 
+      padding: 0px 15px; 
 }
 
 
 .widget_cart .w_cart article button{
+        z-index: 220;
+        position: relative;
         background-color: black;
         color: white;
         border: 1px solid gray;
         font-weight: 800;
-        z-index: 120;
 }
 .widget_cart .w_cart article button:last-child {background-color: red;border-radius: 0px 5px 5px 0px;}
 
 .p_cart{
+        z-index: 220;
+        position: relative;
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: xx-large;
         align-items: center;
@@ -91,3 +100,14 @@
         color: rgb(255, 255, 255);
         border: none;
 }
+
+.widget_cart.closeCartAction{
+        -webkit-transition: transform 1s ease-in-out;
+        transform: translate(-100%,-15%) ;
+}
+
+.f_cart{
+        z-index: 220;
+        position: relative;
+}
+
