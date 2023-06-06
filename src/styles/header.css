@@ -1,0 +1,7 @@
+
+.slide {
+        width: 100%; /* Ancho deseado del contenedor */
+        height: 200px; /* Altura deseada del contenedor */
+        background-size: cover; /* Escala la imagen para cubrir el contenedor */
+        background-position: center center; /* Centra la imagen dentro del contenedor */
+}

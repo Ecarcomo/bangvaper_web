@@ -21,7 +21,7 @@ export const WidgetCart = () => {
                 cartResult = items.map((item) => 
                         (
                         <article key={item.id}>
-                                <span>{item.quantity}x (${item.offer===0?item.price:item.offer} c/u) / {item.name}</span>
+                                <span>{item.quantity}x (${item.offer===0?item.price:item.offer} c/u) {item.offer===0?'':'OFF'} / {item.name}</span>
                                 <button
                                 onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
                                 >

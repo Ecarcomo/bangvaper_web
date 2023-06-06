@@ -54,11 +54,9 @@ function Card(props){
 
 
 export const ListCards = ({ products }) => {
-    const texttest = 'Lista de cards productos:';
 
     return (
         <div>
-            <div className="text">{texttest}</div>
             <div className="card-deck da_card-deck">
                 {products.map(product =>
                     <Card
