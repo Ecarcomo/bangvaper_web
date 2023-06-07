@@ -1,7 +1,16 @@
 
 .slide {
         width: 100%; /* Ancho deseado del contenedor */
-        height: 200px; /* Altura deseada del contenedor */
+        height: 300px; /* Altura deseada del contenedor */
         background-size: cover; /* Escala la imagen para cubrir el contenedor */
         background-position: center center; /* Centra la imagen dentro del contenedor */
+        text-align: center;
+}
+
+.slide h4{
+        position: relative;
+        display: block;
+        font-weight: 800;
+        /* margin: auto 0; */
+        top: 100px
 }

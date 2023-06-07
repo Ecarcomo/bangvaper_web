@@ -38,7 +38,10 @@ export const   Header = ({images}) =>{
                 {images.map(image =>
                         {switch(image.id){
                                 case 3:
-                                        return<img className='slide' src={image.imageUrl} />
+                                        return  <section className='slide' style={{'background-image':'url('+image.imageUrl+')'}} >
+                                                        <h4>Vapeadores Electrónicos Importados</h4>
+                                                        <p>wfwee gewgew gwegew gewgew gewgew gewgew gew gew gewgew gewgew</p>
+                                                </section>
                         }}
                 )}
                
