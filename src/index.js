@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import { ListCards } from './components/Cards.jsx';
 import { Header } from './components/Header.jsx';
+import { Footer } from './components/Footer.jsx';
 import { WidgetCart } from './components/Cart.jsx';
 import { CartProvider} from "react-use-cart";
 
@@ -49,6 +50,7 @@ const Content = () => {
       <div className="seccion-productos">
         <ListCards products={products} />
       </div>
+        <Footer/>
     </div>
   );
 };
