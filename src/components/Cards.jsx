@@ -1,10 +1,10 @@
 //=========Import Globales==========
-import React from 'react';
+import React,{useState} from 'react';
 
 //=========Import Locales==========
 import '../styles/cards.css';
 import { useCart } from "react-use-cart";
-
+import { Modal ,ModalHeader,ModalBody,ModalFooter} from './Modal.jsx';
 
 
 
@@ -12,7 +12,11 @@ import { useCart } from "react-use-cart";
 //let products = require('../data/productsData.json');/* obtengo JSON con datos de los productos en venta*/
 
 //=============Clases de creacion de componentes==================
-function Card(props){
+export const Card = props =>{
+
+    var [showModal,setShowModal] = useState(false);
+
+
 
     const {addItem} = useCart();
 
@@ -39,14 +43,42 @@ function Card(props){
                 <div className='da_card_info'>
                     <h5>{props.name}</h5>
                     {PriceTag()}
-                    <p>{props.description}</p>
+                    <p>{props.description.substring(0, 40)+"..."}</p>
                     <div className='da_btns_cards'>
-                        <a className="btn btn-primary" onClick={addCard}>Añadir al carrito</a>
+                        <a className="btn btn-primary" href onClick={addCard}>Añadir al carrito</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a className="btn btn-secondary">Mas Info</a>
+                        <a className="btn btn-secondary" href onClick={()=>setShowModal(true)}>Mas Info</a>
                     </div>
                 </div>
             </div>
+            <Modal show = {showModal}>
+                <ModalHeader>
+                    <h1><strong>{props.name}</strong></h1>
+                </ModalHeader>
+                <ModalBody>
+                    <table>
+                        <tr>
+                            <td style={{"width":"60%"}}>
+                                <p style={{textAlign:'justify'}}>
+                                <ul>
+                                {
+                                    props.description.split('\n').map((linea,index)=>
+                                        <li><h4 key={index}>{linea}</h4></li>
+                                    )
+                                }
+                                </ul>
+                                </p>
+                            </td>
+                            <td style={{"width":"40%","vertical-align":"top"}}>
+                                <img src={props.imageUrl} alt={'Photo of ' + props.name} ></img>
+                            </td>
+                        </tr>
+                    </table>
+                </ModalBody>
+                <ModalFooter>
+                    <a  className="btn btn-secondary" href onClick={()=>setShowModal(false)}>Cerrar</a>
+                </ModalFooter>
+            </Modal>
         </div>
     );
     

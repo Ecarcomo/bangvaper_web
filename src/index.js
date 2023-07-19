@@ -1,14 +1,13 @@
 //=========Import Globales==========
-import React, { useState, useEffect,useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 //=========Import Locales==========
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
-import { ListCards } from './components/Cards.jsx';
+import {Card, ListCards } from './components/Cards.jsx';
 import { Header } from './components/Header.jsx';
 import { Footer } from './components/Footer.jsx';
 import { WidgetCart } from './components/Cart.jsx';
-import { ModalWG } from './components/Modal.jsx';
 import { CartProvider} from "react-use-cart";
 
 
@@ -51,7 +50,6 @@ const Content = () => {
   return (
     <div className="main">
         <Header images={images}/>
-        <ModalWG />
       <div className="seccion-productos">
         <ListCards products={products} />
       </div>
