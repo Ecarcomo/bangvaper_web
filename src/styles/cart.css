@@ -42,7 +42,8 @@
         border-bottom: 1px solid grey;
         width: 100%;
         min-width: max-content;
-        height: 250px;
+        height: 200px;
+        margin-bottom: 10px;
         scrollbar-width: thin;
         overflow-x: unset;
         overflow-y: auto;
@@ -109,5 +110,17 @@
 .f_cart{
         z-index: 220;
         position: relative;
+}
+
+.cart_form{
+        border-top: 2px solid white;
+        width: inherit;
+        table-layout: fixed;
+        display: block;
+        padding-top:  20px;
+}
+.cart_form td{
+        width: inherit/10;
+        text-align: center;
 }
 
