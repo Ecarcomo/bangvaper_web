@@ -14,7 +14,7 @@
         border-right: 2px solid white;
         border-left: 2px solid white;
         border-radius: 20px 20px 0px 0px;
-        height: 450px;
+        height: 480px;
         overflow-x: unset;
         overflow-y: unset;
         
@@ -117,10 +117,16 @@
         width: inherit;
         table-layout: fixed;
         display: block;
-        padding-top:  20px;
+        padding-top:  10px;
+        padding-bottom:  10px;
 }
 .cart_form td{
         width: inherit/10;
-        text-align: center;
+}
+.cart_form tr:nth-child(n-1){
+        text-align: center!important;
+}
+.cart_form tr:last-child{
+        text-align: left!important;
 }
 
