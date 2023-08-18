@@ -252,7 +252,7 @@ export const WidgetCart = () => {
                                                         </label>        
                                                 </td>
                                                 <td colSpan='3'>
-                                                         <button onClick={handleClick}>Enviar Cotizacion</button>     
+                                                         <button onClick={handleClick}>Enviar Pedido </button>     
                                                 </td>
                                         </tr>
                                         <tr>

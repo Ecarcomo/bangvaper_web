@@ -37,7 +37,7 @@ export const Card = props =>{
    
 
     return (
-        <div key={props.id} className=" da_card col-lg-3">
+        <div key={props.id} className="da_card col-lg-3">
             <div className="da_card_container" >
                 <img src={props.imageUrl} alt={'Photo of ' + props.name} ></img>
                 <div className='da_card_info'>
