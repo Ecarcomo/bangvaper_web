@@ -1,0 +1,16 @@
+
+
+.da_price-tag{
+  display: inline-flex;
+}
+.da_offer h3{
+  text-decoration: line-through;
+  color: red;
+}
+.da_offer h5{
+  color: rgb(61, 255, 61);
+}
+
+.da_btns_cards{
+  display: inline-flex;
+}

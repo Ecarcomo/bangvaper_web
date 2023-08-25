@@ -12,6 +12,8 @@ import {
 import Home from "./pages/home.js";
 import Panel from "./pages/panel.js";
 
+import './styles/global.css';
+
 
 const router = createBrowserRouter([
   {

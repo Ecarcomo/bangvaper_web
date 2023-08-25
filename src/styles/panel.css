@@ -1,0 +1,109 @@
+#dashboard{
+        display: block;
+        position: relative;
+        content: " ";
+        background-color: azure;
+        margin: auto;
+        border-radius: 20px;
+        width: 1000px;
+        height: 700px;
+        padding: 20px;
+}
+
+#list-products{
+        display: inline-flex;
+        position: relative;
+        content: " ";
+        border: 1px solid #000;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 150px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background-color: rgb(39, 39, 39);
+}
+
+
+#panel-edit{
+        display: flex;
+        flex-direction: row;
+        margin-top: 25px;
+        color: #000;
+}
+#panel-edit div{
+        width: 50%;
+}
+
+
+#panel-edit div:last-child{
+        display: flex;
+        flex-direction: column;
+}
+
+.line_layout{
+        display: inline-block;
+        width: 100%;
+}
+.line_layout button {
+        width: 100px;
+}
+.line_layout input[type='number']{
+        width: 100px;
+}
+
+.da_card_panel {
+width: 500px;
+margin: 20px;
+padding: 15px;
+border: none;
+border-radius: 10px;
+background-color: transparent;
+/*background-image: url(../img/giphy.gif);
+background-image: url(../img/humo_color.png);*/
+background-repeat: no-repeat;
+background-size: contain;
+color: white;
+overflow: hidden;
+}
+
+.da_card_panel::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image:linear-gradient(-30deg, rgba(255, 255, 255, 0.5) 0px, rgba(0, 0, 0, 0.7) 50%, rgba(255, 255, 255, 0.5) 100%);
+border-radius: 16px;
+box-shadow: 0 30px 4px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(1px);
+-webkit-backdrop-filter: blur(1px);
+border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.da_card_panel:hover{
+        cursor:pointer;
+}
+
+.da_card_panel_container{
+display: inline-flex;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.da_card_panel_container img{
+position: relative;
+width: 25%;
+
+}
+
+
+
+.da_card_panel_container .da_card_info{
+position: relative;
+width: inherit;       
+}
+

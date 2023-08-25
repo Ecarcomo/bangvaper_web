@@ -12,7 +12,7 @@ import { Modal ,ModalHeader,ModalBody,ModalFooter} from './Modal.jsx';
 //let products = require('../data/productsData.json');/* obtengo JSON con datos de los productos en venta*/
 
 //=============Clases de creacion de componentes==================
-export const Card = props =>{
+ const Card = props =>{
 
     var [showModal,setShowModal] = useState(false);
 
@@ -101,5 +101,55 @@ export const ListCards = ({ products }) => {
                 )}
             </div>
         </div>
+    );
+}
+
+
+const CardPanel = props =>{
+
+  
+
+    function PriceTag() {
+        console.log(props);
+        if (props.offer === 0) {
+            return <div className='da_price-tag'><h3>$ {props.price}</h3></div>;
+        }
+        else {
+            return <div className='da_price-tag da_offer'><h3>$ {props.price}</h3><h5>&nbsp;${props.offer}</h5></div>;
+        }
+    }
+
+
+    return (
+        <button key={props.id} className="da_card_panel col-lg-3">
+            <div className="da_card_panel_container" >
+                <img src={props.imageUrl} alt={'Photo of ' + props.name} ></img>
+                <div className='da_card_info'>
+                    <h7>{props.name}</h7>
+                    <br></br>
+                    {PriceTag()}
+                </div>
+            </div>
+    
+        </button>
+    );
+    
+}
+
+
+export const ListCardsPanel = ({ products }) => {
+
+    return (
+            <div id="list-products">
+                {products.map(product =>
+                    <CardPanel
+                        id={product.id}
+                        imageUrl={product.imageUrl}
+                        name={product.name}
+                        price={product.price}
+                        offer={product.offer_price}
+                        description={product.description} />
+                )}
+            </div>
     );
 }
