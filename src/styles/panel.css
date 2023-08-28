@@ -6,7 +6,7 @@
         margin: auto;
         border-radius: 20px;
         width: 1000px;
-        height: 700px;
+        height: max-content;
         padding: 20px;
 }
 
@@ -21,7 +21,7 @@
         height: 150px;
         overflow-x: auto;
         overflow-y: hidden;
-        background-color: rgb(39, 39, 39);
+        background-color: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -42,8 +42,7 @@
 }
 
 .line_layout{
-        display: inline-block;
-        width: 100%;
+        min-inline-size: max-content;
 }
 .line_layout button {
         width: 100px;
@@ -105,5 +104,10 @@ width: 25%;
 .da_card_panel_container .da_card_info{
 position: relative;
 width: inherit;       
+}
+
+#panel-edit img{
+position: relative;
+width: -webkit-fill-available;
 }
 

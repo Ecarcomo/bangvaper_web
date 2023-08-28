@@ -107,7 +107,28 @@ export const ListCards = ({ products }) => {
 
 const CardPanel = props =>{
 
-  
+    function setEditPanel(props){
+
+        document.getElementById('id_panel').innerHTML = "ID#"+props.id;
+
+        document.getElementById('img_panel').src = props.imageUrl;
+
+        document.getElementById('title_panel').value = props.name;
+        document.getElementById('desc_c_panel').value = props.description.substring(0, 40)+"...";
+        document.getElementById('desc_l_panel').value = props.description;
+
+        document.getElementById('precio_panel').value = props.price;
+
+        if(props.offer !=""){
+            document.getElementById('precio_off_panel').value = props.offer;
+            document.getElementById('radio_btn_panel').checked=true;
+        }
+        else{
+            document.getElementById('precio_off_panel').value = "";
+            document.getElementById('radio_btn_panel').checked=false;
+        }
+
+    }
 
     function PriceTag() {
         console.log(props);
@@ -121,7 +142,7 @@ const CardPanel = props =>{
 
 
     return (
-        <button key={props.id} className="da_card_panel col-lg-3">
+        <button  onClick={()=>setEditPanel(props)} key={props.id} className="da_card_panel col-lg-3">
             <div className="da_card_panel_container" >
                 <img src={props.imageUrl} alt={'Photo of ' + props.name} ></img>
                 <div className='da_card_info'>
@@ -130,7 +151,6 @@ const CardPanel = props =>{
                     {PriceTag()}
                 </div>
             </div>
-    
         </button>
     );
     

@@ -25,19 +25,20 @@ const Panel = () => {
       <h1>Panel Page</h1>
       <ul><li><Link to="/">Home</Link></li></ul>
       <div id='dashboard'>
-        <ListCardsPanel products={products} />
+        <ListCardsPanel products={products}/>
         <div id='panel-edit'>
-          <div><img></img></div>
+          <div><img  id='img_panel'></img></div>
           <div>
-              <label>Imagen PNG</label><input name='image' type='file'></input>
-              <label>Titulo</label><input name='title' type='text'></input>
-              <label>Descripcion Corta</label><input name='desc_c' type='text'></input>
-              <label>Descripcion Larga</label><textarea name='desc_l' cols={70} rows={10}></textarea>
+              <label style={{"textAlign":"right"}} id='id_panel'>ID#</label>
+              <label>Imagen PNG</label><input id='image_panel' name='image_panel' type='file'></input>
+              <label>Titulo</label><input id='title_panel' name='title_panel' type='text'></input>
+              <label>Descripcion Corta</label><input id='desc_c_panel' name='desc_c' type='text'></input>
+              <label>Descripcion Larga</label><textarea id='desc_l_panel' name='desc_l' cols={70} rows={10}></textarea>
 
               <div className='line_layout'>
-                <label>Precio</label><input name='precio' type='number'></input>&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input name='radio_btn' type='checkbox'></input>
-                <label>Precio OFF</label>&nbsp;&nbsp;<input name='precio_off' type='number'></input>
+                <label>Precio</label><input id='precio_panel' name='precio' type='number'></input>&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;
+                <input id='radio_btn_panel' name='radio_btn' type='checkbox'></input>
+                <label>Precio OFF</label>&nbsp;&nbsp;<input id='precio_off_panel' name='precio_off' type='number'></input>
               </div>
               
               <div className='line_layout'>
