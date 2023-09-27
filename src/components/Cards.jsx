@@ -109,7 +109,8 @@ const CardPanel = props =>{
 
     function setEditPanel(props){
 
-        document.getElementById('id_panel').innerHTML = "ID#"+props.id;
+        document.getElementById('btn_nuevo').style.visibility ='visible';
+        document.getElementById('id_panel').innerHTML = "ID#"+props.id; 
 
         document.getElementById('img_panel').src = props.imageUrl;
 
@@ -119,7 +120,7 @@ const CardPanel = props =>{
 
         document.getElementById('precio_panel').value = props.price;
 
-        if(props.offer !=""){
+        if(props.offer !==""){
             document.getElementById('precio_off_panel').value = props.offer;
             document.getElementById('radio_btn_panel').checked=true;
         }
@@ -142,7 +143,7 @@ const CardPanel = props =>{
 
 
     return (
-        <button  onClick={()=>setEditPanel(props)} key={props.id} className="da_card_panel col-lg-3">
+        <button id={'btn_list_'+props.id}  onClick={()=>setEditPanel(props)} key={props.id} className="da_card_panel col-lg-3">
             <div className="da_card_panel_container" >
                 <img src={props.imageUrl} alt={'Photo of ' + props.name} ></img>
                 <div className='da_card_info'>
@@ -157,7 +158,7 @@ const CardPanel = props =>{
 }
 
 
-export const ListCardsPanel = ({ products }) => {
+export const ListCardsPanel = ({ products}) => {
 
     return (
             <div id="list-products">
@@ -168,7 +169,8 @@ export const ListCardsPanel = ({ products }) => {
                         name={product.name}
                         price={product.price}
                         offer={product.offer_price}
-                        description={product.description} />
+                        description={product.description} 
+                    />
                 )}
             </div>
     );
