@@ -24,7 +24,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
         useEffect(() => {
-          fetch('http://127.0.0.1:3000/getProducts')
+          fetch('https://bv-backend-kappa.vercel.app/getProducts')
             .then((res) => res.json())
             .then((data) => {
               console.log(data);
@@ -37,7 +37,7 @@ const Home = () => {
 
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/getImages')
+    fetch('https://bv-backend-kappa.vercel.app/getImages')
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
